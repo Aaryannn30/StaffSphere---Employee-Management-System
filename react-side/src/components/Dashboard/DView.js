@@ -9,7 +9,7 @@ import Workspace from './Workspace';
 
 const DView = () => {
     return (
-        <div className="flex-grow p-6 bg-gray-100">
+        <div className="flex-grow bg-slate-500 dark:bg-slate-900">
             <Routes>
                 <Route path="/dashboard" element={<DefaultD />} />
                 <Route path="/users" element={<Users/>} />
