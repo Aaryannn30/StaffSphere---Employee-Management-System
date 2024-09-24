@@ -73,12 +73,12 @@ const App = () => {
         <MainContent />
         <Footer />
       </Router> */}
-      <Dashboard />
+    <Dashboard />
       {/* <FAQ/> */}
       {/* <Profile/> */}
     </>
   );
-
+  
 }
 
 export default App;

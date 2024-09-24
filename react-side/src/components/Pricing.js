@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiCalendar } from "react-icons/fi";
 import { TbCalendarMonth } from "react-icons/tb";
 
 const Pricing = () => {
+
+    // Scroll to top when component mounts
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [isMonthly, setIsMonthly] = useState(true);
 
     const pricingData = [
