@@ -4,7 +4,7 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 
 import MainContent from './MainContent'; // Import the MainContent component
 import Dashboard from './components/Dashboard/Dashboard';
@@ -16,6 +16,16 @@ import Pricing from './components/Pricing';
 import LoginForm from './components/LoginForm';
 import FAQ from './components/FAQs';
 import Profile from './components/Dashboard/Profile'
+import Workspace from './components/Dashboard/Workspace';
+import DSidebar from './components/Dashboard/DSidebar';
+import Chat from './components/Dashboard/Chat'
+import Analysis from './components/Dashboard/Analysis'
+import UpdateFeed from './components/Dashboard/UpdateFeed';
+import Users from './components/Dashboard/Users'
+import DefaultD from './components/Dashboard/DefaultD';
+import DView from './components/Dashboard/DView';
+import ThemeToggle from './components/ThemeToggle';
+// import PrivateRoute from './utils/PrivateRoute';
 
 const App = () => {
   // const [details, setDetails] = useState([]);
@@ -54,31 +64,47 @@ const App = () => {
   // );
 
   return (
-    //<>
-    //   <Navbar />
-    //   <MainBanner/>
-    //   <Cards/>
-    //   <Pricing />
-    //   <LoginForm/>
-    //   <Footer/>
 
-    // </>
-    <>
-      {/* <Router>
-        <Navbar scroll='true' />
-        <MainBanner/>
-        <Cards />
-        <Pricing />
-        <LoginForm />
-        <MainContent />
-        <Footer />
-      </Router> */}
-    <Dashboard />
-      {/* <FAQ/> */}
-      {/* <Profile/> */}
-    </>
+    <Router>
+      <Routes>
+      <Route path="/" element={
+            <>
+              <Navbar scroll="true" />
+              <MainBanner />
+              <ThemeToggle />
+              <Cards />
+              <Pricing />
+              <LoginForm />
+              <Footer />
+            </>
+          } />
+          <Route
+            path="/dashboard"
+            element={
+              // <PrivateRoute>
+                <DSidebar />
+              // {/* </PrivateRoute> */}
+            }
+          >
+            <Route path="/dashboard/workspace" element={<Workspace />} />
+            <Route path="/dashboard/users" element={<Users />} />
+                <Route path="/dashboard/chat" element={<Chat />} />
+                <Route path="/dashboard/update_feed" element={<UpdateFeed />} />
+                <Route path="/dashboard/analysis" element={<Analysis />} />
+          </Route>
+
+          </Routes>
+    </Router>
   );
   
 }
 
+{/* <Route path="/dashboard/*" element={<Dashboard />}>
+<Route index element={<DefaultD />} /> {/* Default route for /dashboard */}
+{/*<Route path="workspace" element={<Workspace />} />
+<Route path="users" element={<Users />} />
+<Route path="chat" element={<Chat />} />
+<Route path="update_feed" element={<UpdateFeed />} />
+<Route path="analysis" element={<Analysis />} />
+</Route> */}
 export default App;

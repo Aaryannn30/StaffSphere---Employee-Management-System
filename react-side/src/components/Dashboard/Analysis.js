@@ -320,15 +320,15 @@
 //     };
 
 //     return (
-//         <div className="bg-gray-100 p-6">
-//             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-//                 <div className="bg-white p-4 rounded-lg shadow-md">
-//                     <div className="flex justify-between items-center">
+//         <div className="p-6 bg-gray-100">
+//             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+//                 <div className="p-4 bg-white rounded-lg shadow-md">
+//                     <div className="flex items-center justify-between">
 //                         <h3 className="text-lg font-semibold">Employee Attendance</h3>
 //                         <select
 //                             value={attendanceChartType}
 //                             onChange={(e) => setAttendanceChartType(e.target.value)}
-//                             className="border rounded p-1"
+//                             className="p-1 border rounded"
 //                         >
 //                             <option value="line">Line</option>
 //                             <option value="bar">Bar</option>
@@ -339,13 +339,13 @@
 //                     <ChartComponent chartType={attendanceChartType} data={data} options={options} />
 //                 </div>
 
-//                 <div className="bg-white p-4 rounded-lg shadow-md">
-//                     <div className="flex justify-between items-center">
+//                 <div className="p-4 bg-white rounded-lg shadow-md">
+//                     <div className="flex items-center justify-between">
 //                         <h3 className="text-lg font-semibold">Employee Productivity</h3>
 //                         <select
 //                             value={productivityChartType}
 //                             onChange={(e) => setProductivityChartType(e.target.value)}
-//                             className="border rounded p-1"
+//                             className="p-1 border rounded"
 //                         >
 //                             <option value="line">Line</option>
 //                             <option value="bar">Bar</option>
@@ -356,13 +356,13 @@
 //                     <ChartComponent chartType={productivityChartType} data={data} options={options} />
 //                 </div>
 
-//                 <div className="bg-white p-4 rounded-lg shadow-md">
-//                     <div className="flex justify-between items-center">
+//                 <div className="p-4 bg-white rounded-lg shadow-md">
+//                     <div className="flex items-center justify-between">
 //                         <h3 className="text-lg font-semibold">Task Completion</h3>
 //                         <select
 //                             value={taskCompletionChartType}
 //                             onChange={(e) => setTaskCompletionChartType(e.target.value)}
-//                             className="border rounded p-1"
+//                             className="p-1 border rounded"
 //                         >
 //                             <option value="line">Line</option>
 //                             <option value="bar">Bar</option>
@@ -375,95 +375,95 @@
 
 //                 {/* Employee Attendance and Punctuality */}
 //                 <div className="col-span-1 lg:col-span-2">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Attendance and Punctuality</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Attendance and Punctuality</h3>
 //                         <Line data={attendanceData} />
 //                     </div>
 //                 </div>
 
 //                 {/* Employee Productivity */}
 //                 <div className="col-span-1">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Employee Productivity</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Employee Productivity</h3>
 //                         <Radar data={productivityData} />
 //                     </div>
 //                 </div>
 
 //                 {/* Task or Project Completion */}
 //                 <div className="col-span-1 lg:col-span-2">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Task or Project Completion</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Task or Project Completion</h3>
 //                         <Bar data={taskCompletionData} />
 //                     </div>
 //                 </div>
 
 //                 {/* Performance Reviews */}
 //                 <div className="col-span-1">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Performance Reviews</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Performance Reviews</h3>
 //                         <Radar data={performanceReviewData} />
 //                     </div>
 //                 </div>
 
 //                 {/* Employee Satisfaction and Engagement */}
 //                 <div className="col-span-1">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Employee Engagement</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Employee Engagement</h3>
 //                         <Pie data={engagementData} />
 //                     </div>
 //                 </div>
 
 //                 {/* Employee Turnover */}
 //                 <div className="col-span-1">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Employee Turnover</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Employee Turnover</h3>
 //                         <Pie data={turnoverData} options={turnoverOptions} />
 //                     </div>
 //                 </div>
 
 //                 {/* Salary and Compensation Analysis */}
 //                 <div className="col-span-1">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Salary Analysis</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Salary Analysis</h3>
 //                         <Bar data={salaryData} />
 //                     </div>
 //                 </div>
 
 //                 {/* Training and Development */}
 //                 <div className="col-span-1">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Training Development</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Training Development</h3>
 //                         <Line data={trainingData} />
 //                     </div>
 //                 </div>
 
 //                 {/* Diversity and Inclusion */}
 //                 <div className="col-span-1">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Diversity and Inclusion</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Diversity and Inclusion</h3>
 //                         <Pie data={diversityData} />
 //                     </div>
 //                 </div>
 
 //                 <div className="col-span-1">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Leave Type Distribution</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Leave Type Distribution</h3>
 //                         <Pie data={leaveTypeData} options={leaveTypeOptions} />
 //                     </div>
 //                 </div>
 
 //                 {/* Time Off Trends Line Chart */}
 //                 <div className="col-span-1 lg:col-span-2">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Time Off Trends</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Time Off Trends</h3>
 //                         <Line data={timeOffTrendsData} options={timeOffTrendsOptions} />
 //                     </div>
 //                 </div>
 
 //                 {/* Resource Allocation */}
 //                 <div className="col-span-1">
-//                     <div className="bg-white p-6 rounded-lg shadow-md">
-//                         <h3 className="text-lg font-semibold mb-4">Resource Allocation</h3>
+//                     <div className="p-6 bg-white rounded-lg shadow-md">
+//                         <h3 className="mb-4 text-lg font-semibold">Resource Allocation</h3>
 //                         <Bar data={resourceAllocationData} />
 //                     </div>
 //                 </div>
@@ -473,3 +473,12 @@
 // };
 
 // export default Dashboard;
+import React from 'react'
+
+function Analysis() {
+    return (
+        <div className='bg-transparent'>Analysis</div>
+    )
+}
+
+export default Analysis

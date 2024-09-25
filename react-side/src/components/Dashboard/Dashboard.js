@@ -6,7 +6,7 @@ const Dasbboard = () => {
 
     return (
         <>
-            <div className="">
+            <div className="dark:bg-slate-900">
                 <Router>
                     <DSidebar />                
                 </Router>
