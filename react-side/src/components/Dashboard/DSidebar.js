@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaChartPie, FaUserPlus, FaNewspaper, FaTachometerAlt, FaBell, FaBars, FaTimes } from 'react-icons/fa';
 import { MdOutlineMarkUnreadChatAlt, MdDashboardCustomize } from "react-icons/md";
 import { IoFileTrayFull } from "react-icons/io5";
-import { FaUsers } from "react-icons/fa6";
+    import { FaUsers } from "react-icons/fa6";
 import { LuFlower } from "react-icons/lu";
 import SearchBar from '../SearchBar';
 import Dropdown from '../Dropdown';
@@ -22,7 +22,7 @@ const DSidebar = () => {
 
     return (
         <>
-            <nav className="z-50 flex items-center justify-between px-4 py-2 bg-gray-900 shadow-md">
+            <nav className="flex items-center justify-between px-4 py-2 bg-gray-900 shadow-md z-50">
                 {/* Website Name */}
                 <div className="flex items-center text-sm">
                     <LuFlower className='w-5 h-5 text-purple-500' />
@@ -58,7 +58,7 @@ const DSidebar = () => {
                 </div>
             </nav>
 
-            <div className="fixed flex w-screen h-screen bg-gray-100 border-gray-600 rounded-xl -z-10">
+            <div className="flex w-screen h-screen bg-gray-100 border-gray-600 rounded-xl fixed -z-10">
                 {/* Sidebar */}
                 <div
                     className={`fixed top-0 left-0 h-full bg-gray-900 text-white shadow-lg transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -120,9 +120,9 @@ const DSidebar = () => {
 
                 {/* Toggle Buttons Outside Sidebar for Opening */}
                 {!isOpen && (
-                    <div className="fixed flex items-center h-full p-1 text-white bg-gray-800">
-                        <nav className="flex-1 mb-10 space-y-8">
-                            <button onClick={toggleSidebar} className="flex items-center px-3 py-2 text-gray-200 transition bg-gray-800 rounded-lg focus:outline-none mb-44 hover:bg-gray-700 hover:text-white">
+                    <div className="flex items-center p-1 bg-gray-800 text-white fixed h-full">
+                        <nav className="flex-1 space-y-8 mb-10">
+                            <button onClick={toggleSidebar} className="focus:outline-none flex items-center px-3 py-2 mb-44 text-gray-200 bg-gray-800 rounded-lg hover:bg-gray-700 hover:text-white transition">
                                 <FaBars className="w-4 h-4" />
                             </button>
                             <Link to='/dashboard'
@@ -130,7 +130,7 @@ const DSidebar = () => {
                             >
                                 <FaTachometerAlt className="w-4 h-4" />
                             </Link>
-                            <Link to='/dashboard/workspace'                            
+                            <Link to='/workspace'                            
                                 className={`flex items-center px-3 py-2 ${isActive('/workspace') ? 'bg-gray-700 text-white' : 'text-gray-400 hover:bg-gray-700 hover:text-white'} rounded-lg transition`}
                             >
                                 <MdDashboardCustomize className="w-4 h-4" />
@@ -160,8 +160,8 @@ const DSidebar = () => {
                 )}
 
                 {/* Main Content */}
-                <div className={`transform ${!isOpen ? 'ml-[48px]' : 'ml-[200px]'} flex-1 transition-transform duration-700 ease-out overflow-y-auto`}>
-                    <DView />
+                <div className={`transform ${!isOpen ? 'ml-[48px]' : 'ml-[200px]'} flex-1 transition-transform duration-700 ease-out overflow-y-auto dark:bg-slate-900`}>
+                    <DView/>
                 </div>
             </div>
         </>
